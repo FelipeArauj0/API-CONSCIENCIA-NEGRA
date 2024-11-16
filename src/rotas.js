@@ -9,6 +9,7 @@ rotas.get('/', (req, res) => {
 })
 
 rotas.get('/paises', listarPaises)
+
 rotas.get('/artistas', listarArtistas)
 rotas.get('/comidas', listarComidas)
 
