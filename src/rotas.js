@@ -5,7 +5,7 @@ const listarComidas = require('./controladores/comidas');
 const rotas = express();
 
 rotas.get('/', (req, res) => {
-    res.send('tudo ok separando arquivos');
+    res.send({conteudo: 'tudo ok separando arquivos'});
 })
 
 rotas.get('/paises', listarPaises)
