@@ -2,7 +2,7 @@ require('dotenv').config();
 const knex = require('knex')({
     client: 'pg',
     connection: {
-        host: process.env.DB_HOST,
+        host: 'kesavan.db.elephantsql.com',
         port: 5432, // Porta padrão para PostgreSQL
         user: process.env.DB_USER,
         password: process.env.DB_PASS,
