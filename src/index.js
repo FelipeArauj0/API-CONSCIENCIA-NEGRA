@@ -10,6 +10,7 @@ app.use(express.json());
 app.use(cors());
 app.use(rotas);
 
+console.log('CORS_ORIGIN:', process.env.CORS_ORIGIN);
 app.listen(process.env.PORT || 8080, ()=>{
     console.log(`API rodando na porta ${process.env.PORT || 8080}`);
 });

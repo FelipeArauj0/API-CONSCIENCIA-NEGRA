@@ -9,8 +9,8 @@ const listarPaises = async (req,res)=>{
 
         return res.status(200).json(paises);
     } catch (error) {
-        console.log(error)
-        return res.status(500).json({menssagem: 'Erro interno do servidor'})
+        console.error('Erro ao listar países:', error);
+        return res.status(500).json({mensagem: 'Erro interno do servidor'})
     }
 }
 
