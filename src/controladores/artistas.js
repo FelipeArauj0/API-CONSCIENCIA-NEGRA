@@ -8,6 +8,10 @@ const listarArtistas = async (req,res)=>{
         const artistas = await knex('artistas')
             .select('*')
             .where('paises_id', '=', paises_id)
+
+        if (!artistas){
+            return res.status(404).json({mensagem: "artista não encontrado para o pais selecionado"})
+        } 
             
 
         return res.status(200).json(artistas);
