@@ -9,7 +9,7 @@ const listarArtistas = async (req,res)=>{
             .select('*')
             .where('paises_id', '=', paises_id)
 
-        if (!artistas){
+        if (!artistas || artistas.length === 0){
             return res.status(404).json({mensagem: "artista não encontrado para o pais selecionado"})
         } 
             
