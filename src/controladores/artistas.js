@@ -2,10 +2,13 @@ require('dotenv').config()
 const knex = require("../conexaoDB");
 
 const listarArtistas = async (req,res)=>{
+    const {paises_id} = req.body
+
     try {
         const artistas = await knex('artistas')
             .select('*')
-            .orderBy('id')
+            .where('paises_id', '=', paises_id)
+            
 
         return res.status(200).json(artistas);
     } catch (error) {
